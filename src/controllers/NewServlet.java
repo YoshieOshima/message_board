@@ -20,7 +20,8 @@ public class NewServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("token_", request.getSession().getId());
+
+        request.setAttribute("_token", request.getSession().getId());
 
         request.setAttribute("message", new Message());
 
